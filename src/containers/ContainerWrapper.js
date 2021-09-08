@@ -8,7 +8,40 @@ const ContainerWrapper = styled.div`
     height: 100vh;
     position: sticky;
     top: 0;
+    $.show{
+        position: sticky;
+    top: 0;
+        width: 300px;
+    }
 }
+@-webkit-keyframes blink{
+    50%{
+        background: rgb(127,217,113);
+        background: radial-gradient(circle, rgba(127,217,113,1) 0%, rgba(191,246,237,1) 100%);
+       }
+       100%{
+        background: rgb(203,230,199);
+        background: radial-gradient(circle, rgba(203,230,199,1) 0%, rgba(114,232,116,1) 100%);
+       }
+    }
+@keyframes blink{
+    25%{
+        background: rgb(203,230,199);
+        background: radial-gradient(circle, rgba(203,230,199,1) 0%, rgba(109,238,182,1) 100%);
+       }
+   50%{
+    background: rgb(127,217,113);
+    background: radial-gradient(circle, rgba(127,217,113,1) 0%, rgba(191,246,237,1) 100%);
+   }
+   75%{
+    background: rgb(167,172,244);
+    background: radial-gradient(circle, rgba(167,172,244,1) 0%, rgba(109,238,121,1) 100%);
+   }
+   100%{
+    background: rgb(203,230,199);
+    background: radial-gradient(circle, rgba(203,230,199,1) 0%, rgba(114,232,116,1) 100%);
+   }
+    }
 .car {
     display:flex  
 }
@@ -19,9 +52,12 @@ img {
    margin-right:15px;
 }
 .content{
+    -webkit-animation: blink 10s infinite;
+    animation: blink 10s ifinite;
     width: 100%;
-    background: rgb(127,217,113);
-background: radial-gradient(circle, rgba(127,217,113,1) 0%, rgba(191,246,237,1) 100%);
+    background: rgb(203,230,199);
+background: radial-gradient(circle, rgba(203,230,199,1) 0%, rgba(114,232,116,1) 100%);
+  
     color: black;
     height: 100vh;
     overflow-y:scroll;
@@ -41,6 +77,7 @@ background: radial-gradient(circle, rgba(127,217,113,1) 0%, rgba(191,246,237,1) 
     border-right:1px solid rgb(184, 182, 182);
 }
 header{
+    border-bottom: 1px solid rgb(213, 210, 245);
     background-color: white;
     position: sticky;
     top: 0;
@@ -57,14 +94,41 @@ Input {
     width: 380px;
     padding:5px;
     font-size:15px;
-    background-color: rgb(86, 86, 95);
-    color: white;
+    color: black;
     margin:4px  
 }
-Input:hover{
-    background-color: white;
-    color: black;
+.ikon {
+    margin:10px;
 }
+.ikon2 {
+    color:blue;
+}
+.botoms {
+    width:100%;
+   position: sticky;
+   top: 0;
+   height:50px;
+   bottom:0px;
+   background-color: white;
+display:flex;
+}
+.ikonka {
+    margin-right:70px;
+    color:white;
+}
+.rearch {
+    display:flex;
+    justify-content: space-between;
+
+}
+.textss {
+    width:600px;
+    color:rgb(187, 181, 181);
+    padding:10px;
+    font-size:18px;
+    margin-top:-5px;
+}
+
 .text-1{
     margin: -3px;
     margin-bottom:25px;
@@ -167,6 +231,33 @@ justify-content:center;
     .contain2{
         display:inline-block;
     }
+ }
+ .home{
+    margin-bottom:10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    border: 1px solid rgb(165, 159, 159);
+ height:50px;
+    border-bottom-left-radius: 20px;
+ }
+ .write3 {
+   margin-left:10px
+ }
+ .home2{
+    background-color: rgb(183, 238, 178);
+    color: rgb(27, 211, 11);
+    margin-left: 100px;
+    border: 1px solid rgb(165, 159, 159);
+    border-bottom-left-radius: 20px;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-between;
+ }
+ .write9{
+     margin-top:30px;
+     color: rgb(27, 211, 11);
  }
 `
 export default ContainerWrapper
